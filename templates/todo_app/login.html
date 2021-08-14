@@ -1,0 +1,17 @@
+{% extends 'todo_app/base.html' %}
+{% block content %}
+<div class="container pt-4">
+  <div class="col-lg-4 shadow mx-auto p-0 mt-4">
+    <div class="alert alert-primary" style="text-align: center;"><h2>Login Here!</h2></div>
+    <div class="p-4">
+      <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <hr>
+        <p>Don't have an account yet?<a href="/signup">Register Here!</a></p>
+        <div class="d-grid col-lg-12 mx-auto"><input class="btn btn-primary" type="submit" value="Log In"></div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}   

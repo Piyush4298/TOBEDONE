@@ -1,0 +1,17 @@
+{% extends 'todo_app/base.html' %}
+{% block content %}
+<div class="container">
+  <div class="col-lg-4 shadow mx-auto p-0 mt-5">
+    <div class="alert alert-success" style="text-align: center;"><h2>Create Account</h2></div>
+    <div class="p-4">
+      <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <hr>
+        <p>Already have an account? <a href="/login">Login</a></p>
+        <div class="d-grid col-lg-12 mx-auto"><input class="btn btn-success" type="submit" value="Sign Up"></div>
+      </form>
+    </div>
+  </div> 
+</div>     
+{% endblock %}
